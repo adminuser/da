@@ -1,0 +1,82 @@
+<div  style="margin:0;padding:0;height:100%;" >
+
+<div style="clear:both;position:fixed;top:0;height:70%;width:100%;text-align:center;overflow-x:scroll;overflow-y:scroll;" >
+    <h1 style="border-bottom: 5px solid green">
+      {{ title }}
+    </h1>
+    
+    <img mouseWheel height="{{imgHeight}}" src={{imageSrc}}  width="{{imgWidth}}" (mouseWheelUp)="mouseWheelUpFunc()"
+ (mouseWheelDown)="mouseWheelDownFunc()" />
+  
+</div>
+<!--
+<div class="col-md-12" style="text-align:center ;overflow-x:scroll;overflow-y:scroll; height:20%;"> 
+-->
+<div style="clear:both;position:fixed;bottom:0;height:30%;width:100%;text-align:center;overflow-x:scroll;overflow-y:scroll;" >
+  <table  class="table">
+      <thead >
+          <tr >
+              <th>Id</th>
+              <th>Image</th>
+              <th>FirstName</th>
+              <th>LastName</th>
+              <th>DateOfBirth</th>
+              <th>Gender</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor = "let data of dataToCapture" (click)="renderImageEvent($event, data.Image)"  >
+            <td>
+               {{data.Id}} 
+            </td>
+            <td>
+                {{data.Image}}
+            </td>
+            <td>
+                <input type="text" value="{{data.FirstName}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.LastName}}" >
+            </td>
+            <td>
+                <input type="date" value="{{data.DateOfBirth}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+
+
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>
+            <td>
+                <input type="text" value="{{data.Gender}}" >
+            </td>          
+          </tr>
+
+       
+      </tbody>
+  </table>
+</div>
+</div>
